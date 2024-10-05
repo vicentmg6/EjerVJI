@@ -11,7 +11,7 @@ curl "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/punts-
 jq 'if .results[].nombre==$1 then .results[].viento_dir,.results[].temperatur' aux.json > aux2.json
 
 #Parte 4: Crear fichero histórico
-
+aux2.json >> historico.txt
 #Parte 2: Ejecudar cada 5 seg
 sleep 5
 done
