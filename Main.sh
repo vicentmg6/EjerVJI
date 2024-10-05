@@ -8,6 +8,8 @@ curl https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/punts-m
 
 #Parte3c: Parametro Valor cada 5seg
 
+jq 'if .results[].nombre==$1 then .results[].viento_dir,.results[].temperatur' aux.json > aux2.json
+
 #Parte 4: Crear fichero histórico
 
 #Parte 2: Ejecudar cada 5 seg
